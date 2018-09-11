@@ -1,0 +1,98 @@
+<!-- 一行一个商品的item -->
+<template>
+    <view class='list-item'>
+        <image class="item-img" src="{{itemData.imgSrc}}" mode="aspectFit" lazy-load="false"/>
+        <view class="item-right">
+            <view class="item-title">{{itemData.title}}</view>
+            <view class="item-info">
+                <view class="item-info-box">
+                    <view class="item-price">￥<text>{{itemData.price}}</text></view>
+                    <view class="item-sales">销量<text>{{itemData.sales}}</text></view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>
+
+<script>
+    import wepy from 'wepy';
+    export default class ListItem extends wepy.component {
+        props = {
+            itemData: {
+                type: Object,
+                default: {}
+            }
+        };
+        data = {
+        };
+
+        components = {};
+
+        methods = {};
+
+        events = {};
+
+        watch = {};
+
+        computed = {};
+
+        onLoad() {
+         };
+
+        onShow() { };
+    }
+</script>
+
+<style lang='less'>
+.list-item{
+    position: relative;
+    padding: 20rpx ;
+    border-bottom: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    .item-img{
+        width: 160rpx;
+        height: 160rpx;
+    }
+    .item-right{
+        float: left;
+        top: 20rpx;
+        position: absolute;
+        left: 200rpx;
+        width: 530rpx;
+        height:160rpx;
+        .item-title{
+            font-size: 28rpx;
+            font-weight: 600;
+            color: #333;
+            overflow : hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        .item-info{
+            position: absolute;
+            bottom: 0;
+            width:100%;
+            .item-info-box{
+                position: relative;
+                display: flex;
+                display: -webkit-flex;
+                justify-content: space-between;
+                .item-price{
+                    color: #c20000;
+                    font-size: 12px;
+                    text{
+                        font-size: 14px;
+                        font-weight: 600;
+                    }
+                }
+                .item-sales{
+                    font-size: 12px;
+                    color: #c2c2c2;
+                }
+            }
+        }
+    }
+}
+</style>

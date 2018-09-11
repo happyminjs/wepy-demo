@@ -1,0 +1,86 @@
+<!--  -->
+<template>
+    <view class='container'>
+        <view class="dlist">
+            <repeat for="{{listData}}" key="index" index="index" item="item">
+                <item :itemData.sync="item"></item>
+            </repeat>
+        </view>
+    </view>
+</template>
+
+<script>
+    import wepy from 'wepy';
+    import item from '../../components/product/double-list-item';
+    export default class DoubleList extends wepy.page {
+        config = {
+            navigationBarTitleText: "double-list",
+        };
+
+        data = {
+            listData: [
+                {
+                    imgSrc: 'https://image-shop.chuchutong.com/culiu.cdn/image/201808/17/a7c15ec17451a99004044f171b21342c.jpeg',
+                    title: '猕猴桃啊啊啊，很好吃',
+                    price: '32.90',
+                    sales: '3211'
+                },
+                {
+                    imgSrc: 'https://image-shop.chuchutong.com/culiu.cdn/image/201808/17/a7c15ec17451a99004044f171b21342c.jpeg',
+                    title: '猕猴桃啊啊啊，很好吃猕猴桃啊啊啊，很好吃猕猴桃啊啊啊，很好吃猕猴桃啊啊啊，很好吃',
+                    price: '32.90',
+                    sales: '3211'
+                },
+                {
+                    imgSrc: 'https://image-shop.chuchutong.com/culiu.cdn/image/201808/17/a7c15ec17451a99004044f171b21342c.jpeg',
+                    title: '猕猴桃啊啊啊，很好吃hen好吃很好吃的地方很好吃的喔猕猴桃啊啊啊，很好吃hen好吃很好吃的地方很好吃的喔',
+                    price: '32.90',
+                    sales: '3211'
+                },
+                {
+                    imgSrc: 'https://image-shop.chuchutong.com/culiu.cdn/image/201808/17/a7c15ec17451a99004044f171b21342c.jpeg',
+                    title: '猕猴桃啊啊啊，很好吃hen好吃很好吃的地方很好吃的喔猕猴桃啊啊啊，很好吃hen好吃很好吃的地方很好吃的喔',
+                    price: '32.90',
+                    sales: '3211'
+                },
+                {
+                    imgSrc: 'https://image-shop.chuchutong.com/culiu.cdn/image/201808/17/a7c15ec17451a99004044f171b21342c.jpeg',
+                    title: '猕猴桃啊啊啊，很好吃hen好吃很好吃的地方很好吃的喔',
+                    price: '32.90',
+                    sales: '3211'
+                },
+                {
+                    imgSrc: 'https://image-shop.chuchutong.com/culiu.cdn/image/201808/17/a7c15ec17451a99004044f171b21342c.jpeg',
+                    title: '猕猴桃啊啊啊，很好吃hen好吃很好吃的地方很好吃的喔猕猴桃啊啊啊，很好吃hen好吃很好吃的地方很好吃的喔',
+                    price: '32.90',
+                    sales: '3211'
+                }
+            ]
+        };
+
+        components = {
+            'item': item
+        };
+
+        methods = {};
+
+        events = {};
+
+        watch = {};
+
+        computed = {};
+
+        onLoad() { };
+
+        onShow() { };
+    }
+</script>
+
+<style lang='less'>
+.container{
+    position: relative;
+    .dlist{
+        width:100%;
+    }
+}
+</style>

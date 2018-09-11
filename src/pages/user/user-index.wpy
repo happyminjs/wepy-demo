@@ -1,0 +1,34 @@
+<!--  -->
+<template>
+    <view class='container'>
+        <text>个人中心</text>
+    </view>
+</template>
+
+<script>
+    import wepy from 'wepy';
+    export default class UserIndex extends wepy.page {
+        config = {
+        navigationBarTitleText: "",
+        };
+
+        data = {};
+
+        components = {};
+
+        methods = {};
+
+        events = {};
+
+        watch = {};
+
+        computed = {};
+
+        onLoad() { };
+
+        onShow() { };
+    }
+</script>
+
+<style lang='less'>
+</style>
